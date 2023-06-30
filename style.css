@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  font-size: 15px;
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.overlay {
+  display: none;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.mobile {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+}
+
+header {
+  padding: 2rem 0;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo img {
+  width: 70px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 8px;
+}
+
+nav ul a {
+  display: inline-block;
+  color: var(--dark-grayish-blue);
+}
+
+nav ul a:hover {
+  color: var(--soft-red);
+}
+
+section {
+  padding: 2rem 0;
+}
+
+section .container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  column-gap: 1rem;
+}
+
+section .left-col {
+  flex: 2;
+}
+
+section .right-col {
+  flex: 1;
+}
+
+.left-col {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.left-col > div:last-child {
+  display: flex;
+  align-items: stretch;
+  gap: 0.6rem;
+}
+
+.left-col > div:last-child > div {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 2.7rem;
+  font-weight: 900;
+}
+
+.hero-desc {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.hero-desc button {
+  align-self: flex-start;
+  border: none;
+  background-color: var(--soft-red);
+  color: #fff;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  padding: 0.65rem 1rem;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hero-desc button:hover {
+  background-color: var(--very-dark-blue);
+}
+
+.right-col {
+  background-color: var(--very-dark-blue);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+}
+
+.right-col h2 {
+  flex: 1;
+  font-size: 1.8rem;
+  color: var(--soft-orange);
+}
+
+.right-col ul {
+  display: flex;
+  flex: 6;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-col li {
+  padding: 1.3rem 0;
+  border-bottom: 1px solid var(--dark-grayish-blue);
+}
+
+.right-col li:last-child {
+  border-bottom: 0;
+}
+
+.right-col a {
+  font-size: 1.15rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.right-col a:hover {
+  color: var(--soft-orange);
+}
+
+.right-col p {
+  color: var(--dark-grayish-blue);
+}
+
+footer {
+  padding: 2rem 0;
+}
+
+footer .container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  column-gap: 1rem;
+}
+
+footer .card {
+  flex: 1;
+}
+
+.card {
+  display: flex;
+  align-items: stretch;
+  column-gap: 0.7rem;
+}
+
+.card .image {
+  flex: 1;
+}
+
+.card .card-text {
+  flex: 2;
+}
+
+.card img {
+  border-radius: 2px;
+  object-fit: cover;
+  object-position: center;
+  max-height: 100%;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-text h3 {
+  color: var(--grayish-blue);
+  font-size: 1.85rem;
+}
+
+.card-text a {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--very-dark-blue);
+}
+
+.card-text a:hover {
+  color: var(--soft-red);
+}
+
+.card-text p {
+  color: var(--dark-grayish-blue);
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--dark-grayish-blue);
+  padding: 1.5rem 0;
+}
+
+@media (max-width: 870px) {
+  footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+  }
+
+  section .container {
+    column-gap: 0.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  section .container {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  footer .container {
+    display: block;
+  }
+
+  .card {
+    max-height: 120px;
+    margin: 2rem 0;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  section .container {
+    flex-direction: column;
+  }
+
+  .left-col > div:last-child {
+    display: flex;
+    row-gap: 1.2rem;
+    flex-direction: column;
+  }
+
+  .hero-desc {
+    display: block;
+  }
+
+  .hero-desc p {
+    margin-bottom: 1rem;
+  }
+
+  body.active .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow-y: hidden;
+  }
+
+  .menu-btn {
+    display: block;
+    z-index: 99;
+  }
+
+  .menu-btn img {
+    width: 43px;
+  }
+
+  nav {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    background: var(--off-white);
+    padding-top: 4rem;
+    padding-left: 1.5rem;
+    width: 268px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  nav ul {
+    display: block;
+    margin-top: 4rem;
+  }
+
+  nav ul li {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+
+  body.active nav {
+    right: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 2.3rem
+  }
+}
+
+@media (max-width: 300px) {
+    .card {
+        column-gap: 0.3rem;
+    }
+
+    .card .card-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .card-text a {
+        font-size: 1rem;
+    }
+
+    .card-text p {
+        font-size: 0.9rem;
+    }
+
+    nav {
+        width: 168px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .right-col h2 {
+        font-size: 1.5;
+    }
+
+    .right-col ul li a {
+        font-size: 1rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-desc p {
+        font-size: 0.9rem;
+    }
+
+    .hero-desc button {
+        font-size: .8rem;
+    }
+}
