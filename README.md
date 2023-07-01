@@ -35,7 +35,7 @@ Mobile view
 
 ### Links
 
-- Live Site URL: [See it live](https://your-live-site-url.com)
+- Live Site URL: [See it live](https://benedictumeozor.github.io/NewsHomePage/)
 
 ## My process
 
